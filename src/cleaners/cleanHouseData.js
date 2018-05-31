@@ -1,6 +1,6 @@
 export const cleanHouseData = (houseData) => {
   const cleanHouseData = houseData.map(house => {
-    const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words } = house;
+    const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words, swornMembers } = house;
 
     return {
       name,
@@ -9,7 +9,8 @@ export const cleanHouseData = (houseData) => {
       titles,
       coatOfArms,
       ancestralWeapons,
-      words
+      words,
+      swornMembers
     };
   });
 

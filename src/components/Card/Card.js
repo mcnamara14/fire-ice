@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './Card.css';
+import { fetchSwornMembers } from '../../apiCalls/index';
+
+export const handleClick = (swornMembers) => {
+  fetchSwornMembers(swornMembers);
+}
 
 export const Card = (props) => {
   const {
@@ -9,7 +14,8 @@ export const Card = (props) => {
     titles,
     coatOfArms,
     ancestralWeapons,
-    words
+    words,
+    swornMembers
   } = props;
 
   const foundedEra = founded ? founded : 'N/A';
@@ -30,7 +36,7 @@ export const Card = (props) => {
   });
 
   return (
-    <article className="houseCard">
+    <article className="houseCard" onClick={() => handleClick({swornMembers})} >
       <h2>{name}</h2>
       <h3>{words}</h3>
       <h4>Founded: {foundedEra}</h4>
