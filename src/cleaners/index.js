@@ -4,4 +4,4 @@ import { cleanSwornHouseMembersData  } from './cleanSwornHouseMembersData';
 export {
   cleanHouseData,
   cleanSwornHouseMembersData
-}
+};

@@ -5,7 +5,8 @@ export const cleanSwornHouseMembersData = (membersData) => {
 
     return {
       name,
-      living};
+      living
+    };
   });
 
   return cleanMembersData;

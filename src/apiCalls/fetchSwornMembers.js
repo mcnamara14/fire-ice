@@ -1,9 +1,7 @@
-import { fetchHouseData } from ".";
-
 export const fetchSwornMembers = (swornMembers) => {
   const allSwornMembers = swornMembers.swornMembers;
   const memberIds = allSwornMembers.map(member => {
-    return member.substring(member.lastIndexOf("/") + 1)
+    return member.substring(member.lastIndexOf("/") + 1);
   });
 
   const fetchPromises = memberIds.map(id => {
@@ -11,6 +9,6 @@ export const fetchSwornMembers = (swornMembers) => {
       .then(response => response.json());
   });
 
-  return Promise.all(fetchPromises)
+  return Promise.all(fetchPromises);
 };
 

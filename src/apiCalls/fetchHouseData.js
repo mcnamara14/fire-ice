@@ -3,5 +3,5 @@ export const fetchHouseData = () => {
 
   return fetch(url)
     .then(data => data.json())
-    .catch(error => console.log(error))
-}
+    .catch(error => alert(error));
+};

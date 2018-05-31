@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 import { fetchSwornMembers } from '../../apiCalls/index';
 import { cleanSwornHouseMembersData } from '../../cleaners/index';
@@ -9,7 +10,7 @@ export class Card extends Component {
 
     this.state = {
       swornMembers: []
-    }
+    };
   }
 
   handleClick = async (swornMembers) => {
@@ -19,17 +20,15 @@ export class Card extends Component {
 
       this.setState({
         swornMembers: swornMembersData 
-      })
+      });
     } else {
       this.setState({
         swornMembers: []
-      })
+      });
     }
   }
 
   render() {
-    let swornMembersList;
-
     const {
       name,
       founded, 
@@ -57,15 +56,15 @@ export class Card extends Component {
         <p className="weapon" key={index}>Weapon: {weapon}</p>
       );
     });
-
-    if (this.state.swornMembers) {
-      swornMembersList = this.state.swornMembers.map((member, index) => {
-        return <p>{member.name}: {member.living} </p>
-      })
-    }
+    const swornMembersList = this.state.swornMembers.map((member, index) => {
+      return <p key={index}>{member.name}: {member.living} </p>;
+    });
 
     return (
-      <article className="houseCard" onClick={() => this.handleClick({swornMembers})} >
+      <article 
+        className="houseCard" 
+        onClick={() => this.handleClick({swornMembers})} 
+      >
         <h2>{name}</h2>
         <h3>{words}</h3>
         <h4>Founded: {foundedEra}</h4>
@@ -85,4 +84,15 @@ export class Card extends Component {
       </article>
     ); 
   }
+}
+
+Card.propTypes = {
+  name: PropTypes.string,
+  founded: PropTypes.string,
+  seats: PropTypes.array,
+  titles: PropTypes.array,
+  ancestralWeapons: PropTypes.array,
+  coatOfArms: PropTypes.string,
+  words: PropTypes.string,
+  swornMembers: PropTypes.array
 };

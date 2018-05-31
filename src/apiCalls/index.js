@@ -4,4 +4,4 @@ import { fetchSwornMembers } from './fetchSwornMembers';
 export {
   fetchHouseData,
   fetchSwornMembers
-}
+};
