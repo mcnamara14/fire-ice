@@ -60,11 +60,11 @@ App.propTypes = {
   houseData: PropTypes.array
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   houseData: state.houseData
 });
 
-const mapDispatchToProps = dispatch => ({ 
+export const mapDispatchToProps = dispatch => ({ 
   storeHouseData: (data) => dispatch(storeHouseData(data))
 });
 

@@ -1,4 +1,4 @@
-export const mockHouseData = [
+export const mockCleanHouseData = [
   {
     ancestralWeapons: ["Lady Forlorn"],
     coatOfArms: "Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)",
@@ -11,7 +11,7 @@ export const mockHouseData = [
   }
 ]
 
-export const dirtyHouseData = [
+export const mockDirtyHouseData = [
   {
     ancestralWeapons: ["Lady Forlorn"],
     cadetBranches: [],
