@@ -5,11 +5,16 @@ import './App.css';
 import { connect } from 'react-redux';
 import { fakeAction } from '../../actions';
 import { fetchHouseData } from '../../apiCalls/index';
+import { cleanHouseData } from '../../cleaners/cleanHouseData';
+import { storeHouseData } from '../../actions/index';
 
 class App extends Component {
 
-  componentDidMount() {
-    fetchHouseData();
+  async componentDidMount() {
+    const data = await fetchHouseData();
+    const cleanData = cleanHouseData(data);
+
+    this.props.storeHouseData(cleanData);
   }
 
   render() {
@@ -36,7 +41,9 @@ App.propTypes = {
 };
 
 const mapStateToProps = ({ fake }) => ({ fake });
-const mapDispatchToProps = dispatch => ({ fakeAction:
-  () => dispatch(fakeAction())
+
+const mapDispatchToProps = dispatch => ({ 
+  fakeAction: () => dispatch(fakeAction()),
+  storeHouseData: (data) => dispatch(storeHouseData(data))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(App);
