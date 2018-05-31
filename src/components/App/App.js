@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes, { shape, func, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
-import { fakeAction } from '../../actions';
 import { fetchHouseData } from '../../apiCalls/index';
 import { cleanHouseData } from '../../cleaners/cleanHouseData';
 import { storeHouseData } from '../../actions/index';
@@ -15,7 +14,7 @@ class App extends Component {
     
     this.state = {
       loading: false
-    }
+    };
   }
 
   async componentDidMount() {
@@ -38,8 +37,8 @@ class App extends Component {
     const houseCards = this.props.houseData.map((house, index) => {
       return (
         <Card key={index} {...house} />
-      )
-    })
+      );
+    });
 
     return (
       <div className='App'>
@@ -57,8 +56,8 @@ class App extends Component {
 }
 
 App.propTypes = {
-  fake: shape({ fake: string }),
-  fakeAction: func.isRequired
+  storeHouseData: PropTypes.func,
+  houseData: PropTypes.array
 };
 
 const mapStateToProps = state => ({
@@ -68,4 +67,5 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({ 
   storeHouseData: (data) => dispatch(storeHouseData(data))
 });
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);

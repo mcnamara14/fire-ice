@@ -28,10 +28,6 @@
   100% { background-position: 500px 500px, 100px 200px, -100px 150px; }
 }
 
-@keyframes App-logo-spin {
-  transform: scale(1.5,1.5);
-}
-
 #wolf {
   height: 200px;
 }
