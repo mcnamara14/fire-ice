@@ -1,34 +1,49 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Card.css';
-import { fetchSwornMembers } from '../../apiCalls/index';
-import { cleanSwornHouseMembersData } from '../../cleaners/index';
+import { fetchSwornMembers } from '../../apiCalls';
+import { cleanSwornHouseMembersData } from '../../cleaners';
+import { storeSwornMembers } from '../../actions';
 
 export class Card extends Component {
   constructor() {
     super();
 
     this.state = {
-      swornMembers: []
+      displaySworn: false
     };
   }
 
   handleClick = async (swornMembers) => {
-    if (!this.state.swornMembers.length) {
-      const membersData = await fetchSwornMembers(swornMembers);
-      const swornMembersData = cleanSwornHouseMembersData(membersData);
+    const houseStored = this.houseInStore();
 
-      this.setState({
-        swornMembers: swornMembersData 
-      });
-    } else {
-      this.setState({
-        swornMembers: []
-      });
+    if (!houseStored) {
+      const swornMembersData = await fetchSwornMembers(swornMembers);
+      const cleanSwornMembers = cleanSwornHouseMembersData(swornMembersData);
+
+      this.props.storeSwornMembers(this.props.name, cleanSwornMembers);
     }
+
+    this.toggleDisplaySworn();
+  }
+
+  houseInStore = () => {
+    const houseKeys = Object.keys(this.props.houseSwornMembers);
+    const houseInStore = houseKeys.find(house => house === this.props.name);
+
+    return houseInStore;
+  }
+
+  toggleDisplaySworn = () => {
+    this.setState({
+      displaySworn: !this.state.displaySworn
+    });
   }
 
   render() {
+    let swornMembersList;
+
     const {
       name,
       founded, 
@@ -56,9 +71,20 @@ export class Card extends Component {
         <p className="weapon" key={index}>Weapon: {weapon}</p>
       );
     });
-    const swornMembersList = this.state.swornMembers.map((member, index) => {
-      return <p key={index}>{member.name}: {member.living} </p>;
-    });
+
+    if (this.state.displaySworn) {
+      const swornMembersInfo = this.props.houseSwornMembers[name]
+        .map((member, index) => {
+          return <p key={index}>{member.name}: {member.living} </p>;
+        });
+
+      swornMembersList = (
+        <div className="swornMembers">
+          <h4>Sworn Members</h4>
+          { swornMembersInfo }
+        </div>
+      );
+    }
 
     return (
       <article 
@@ -78,9 +104,7 @@ export class Card extends Component {
           {allWeapons}
         </div>
         <p>Coat of Arms: {coatOfArms}</p>
-        <div className="swornMembers">
-          {swornMembersList}
-        </div>
+        { swornMembersList }
       </article>
     ); 
   }
@@ -94,5 +118,19 @@ Card.propTypes = {
   ancestralWeapons: PropTypes.array,
   coatOfArms: PropTypes.string,
   words: PropTypes.string,
-  swornMembers: PropTypes.array
+  swornMembers: PropTypes.array,
+  storeSwornMembers: PropTypes.func,
+  houseSwornMembers: PropTypes.object
 };
+
+export const mapDispatchToProps = (dispatch) => ({
+  storeSwornMembers: (houseName, swornMembers) => {
+    return dispatch(storeSwornMembers(houseName, swornMembers));
+  }
+});
+
+export const mapStateToProps = (state) => ({
+  houseSwornMembers: state.houseSwornMembers
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Card);

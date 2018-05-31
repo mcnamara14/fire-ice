@@ -1,0 +1,479 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    houseData={
+        Array [
+            Object {
+              "ancestralWeapons": Array [
+                "Lady Forlorn",
+              ],
+              "coatOfArms": "Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)",
+              "founded": "",
+              "name": "House Corbray of Heart's Home",
+              "seats": Array [
+                "Heart's Home",
+              ],
+              "swornMembers": Array [
+                "https://www.anapioficeandfire.com/api/characters/255",
+                "https://www.anapioficeandfire.com/api/characters/256",
+                "https://www.anapioficeandfire.com/api/characters/447",
+                "https://www.anapioficeandfire.com/api/characters/654",
+                "https://www.anapioficeandfire.com/api/characters/677",
+                "https://www.anapioficeandfire.com/api/characters/681",
+                "https://www.anapioficeandfire.com/api/characters/871",
+                "https://www.anapioficeandfire.com/api/characters/1182",
+              ],
+              "titles": Array [
+                "Lord of Heart's Home",
+                "King of the Fingers (historical)",
+              ],
+              "words": "",
+            },
+          ]
+    }
+    storeHouseData={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="App-header"
+>
+          <img
+                    alt="logo"
+                    className="App-logo"
+                    src="logo.svg"
+          />
+          <h2>
+                    Welcome to Westeros
+          </h2>
+</div>,
+        <div
+          className="Display-info"
+>
+          <Connect(Card)
+                    ancestralWeapons={
+                              Array [
+                                        "Lady Forlorn",
+                                      ]
+                    }
+                    coatOfArms="Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)"
+                    founded=""
+                    name="House Corbray of Heart's Home"
+                    seats={
+                              Array [
+                                        "Heart's Home",
+                                      ]
+                    }
+                    swornMembers={
+                              Array [
+                                        "https://www.anapioficeandfire.com/api/characters/255",
+                                        "https://www.anapioficeandfire.com/api/characters/256",
+                                        "https://www.anapioficeandfire.com/api/characters/447",
+                                        "https://www.anapioficeandfire.com/api/characters/654",
+                                        "https://www.anapioficeandfire.com/api/characters/677",
+                                        "https://www.anapioficeandfire.com/api/characters/681",
+                                        "https://www.anapioficeandfire.com/api/characters/871",
+                                        "https://www.anapioficeandfire.com/api/characters/1182",
+                                      ]
+                    }
+                    titles={
+                              Array [
+                                        "Lord of Heart's Home",
+                                        "King of the Fingers (historical)",
+                                      ]
+                    }
+                    words=""
+          />
+          <div
+                    className="loading"
+          />
+</div>,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="logo"
+              className="App-logo"
+              src="logo.svg"
+/>,
+            <h2>
+              Welcome to Westeros
+</h2>,
+          ],
+          "className": "App-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "logo",
+              "className": "App-logo",
+              "src": "logo.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Welcome to Westeros",
+            },
+            "ref": null,
+            "rendered": "Welcome to Westeros",
+            "type": "h2",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            Array [
+              <Connect(Card)
+                ancestralWeapons={
+                                Array [
+                                                "Lady Forlorn",
+                                              ]
+                }
+                coatOfArms="Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)"
+                founded=""
+                name="House Corbray of Heart's Home"
+                seats={
+                                Array [
+                                                "Heart's Home",
+                                              ]
+                }
+                swornMembers={
+                                Array [
+                                                "https://www.anapioficeandfire.com/api/characters/255",
+                                                "https://www.anapioficeandfire.com/api/characters/256",
+                                                "https://www.anapioficeandfire.com/api/characters/447",
+                                                "https://www.anapioficeandfire.com/api/characters/654",
+                                                "https://www.anapioficeandfire.com/api/characters/677",
+                                                "https://www.anapioficeandfire.com/api/characters/681",
+                                                "https://www.anapioficeandfire.com/api/characters/871",
+                                                "https://www.anapioficeandfire.com/api/characters/1182",
+                                              ]
+                }
+                titles={
+                                Array [
+                                                "Lord of Heart's Home",
+                                                "King of the Fingers (historical)",
+                                              ]
+                }
+                words=""
+/>,
+            ],
+            <div
+              className="loading"
+/>,
+          ],
+          "className": "Display-info",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "class",
+            "props": Object {
+              "ancestralWeapons": Array [
+                "Lady Forlorn",
+              ],
+              "coatOfArms": "Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)",
+              "founded": "",
+              "name": "House Corbray of Heart's Home",
+              "seats": Array [
+                "Heart's Home",
+              ],
+              "swornMembers": Array [
+                "https://www.anapioficeandfire.com/api/characters/255",
+                "https://www.anapioficeandfire.com/api/characters/256",
+                "https://www.anapioficeandfire.com/api/characters/447",
+                "https://www.anapioficeandfire.com/api/characters/654",
+                "https://www.anapioficeandfire.com/api/characters/677",
+                "https://www.anapioficeandfire.com/api/characters/681",
+                "https://www.anapioficeandfire.com/api/characters/871",
+                "https://www.anapioficeandfire.com/api/characters/1182",
+              ],
+              "titles": Array [
+                "Lord of Heart's Home",
+                "King of the Fingers (historical)",
+              ],
+              "words": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "loading",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="App-header"
+>
+            <img
+                        alt="logo"
+                        className="App-logo"
+                        src="logo.svg"
+            />
+            <h2>
+                        Welcome to Westeros
+            </h2>
+</div>,
+          <div
+            className="Display-info"
+>
+            <Connect(Card)
+                        ancestralWeapons={
+                                    Array [
+                                                "Lady Forlorn",
+                                              ]
+                        }
+                        coatOfArms="Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)"
+                        founded=""
+                        name="House Corbray of Heart's Home"
+                        seats={
+                                    Array [
+                                                "Heart's Home",
+                                              ]
+                        }
+                        swornMembers={
+                                    Array [
+                                                "https://www.anapioficeandfire.com/api/characters/255",
+                                                "https://www.anapioficeandfire.com/api/characters/256",
+                                                "https://www.anapioficeandfire.com/api/characters/447",
+                                                "https://www.anapioficeandfire.com/api/characters/654",
+                                                "https://www.anapioficeandfire.com/api/characters/677",
+                                                "https://www.anapioficeandfire.com/api/characters/681",
+                                                "https://www.anapioficeandfire.com/api/characters/871",
+                                                "https://www.anapioficeandfire.com/api/characters/1182",
+                                              ]
+                        }
+                        titles={
+                                    Array [
+                                                "Lord of Heart's Home",
+                                                "King of the Fingers (historical)",
+                                              ]
+                        }
+                        words=""
+            />
+            <div
+                        className="loading"
+            />
+</div>,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="logo"
+                className="App-logo"
+                src="logo.svg"
+/>,
+              <h2>
+                Welcome to Westeros
+</h2>,
+            ],
+            "className": "App-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "logo",
+                "className": "App-logo",
+                "src": "logo.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Welcome to Westeros",
+              },
+              "ref": null,
+              "rendered": "Welcome to Westeros",
+              "type": "h2",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              Array [
+                <Connect(Card)
+                  ancestralWeapons={
+                                    Array [
+                                                      "Lady Forlorn",
+                                                    ]
+                  }
+                  coatOfArms="Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)"
+                  founded=""
+                  name="House Corbray of Heart's Home"
+                  seats={
+                                    Array [
+                                                      "Heart's Home",
+                                                    ]
+                  }
+                  swornMembers={
+                                    Array [
+                                                      "https://www.anapioficeandfire.com/api/characters/255",
+                                                      "https://www.anapioficeandfire.com/api/characters/256",
+                                                      "https://www.anapioficeandfire.com/api/characters/447",
+                                                      "https://www.anapioficeandfire.com/api/characters/654",
+                                                      "https://www.anapioficeandfire.com/api/characters/677",
+                                                      "https://www.anapioficeandfire.com/api/characters/681",
+                                                      "https://www.anapioficeandfire.com/api/characters/871",
+                                                      "https://www.anapioficeandfire.com/api/characters/1182",
+                                                    ]
+                  }
+                  titles={
+                                    Array [
+                                                      "Lord of Heart's Home",
+                                                      "King of the Fingers (historical)",
+                                                    ]
+                  }
+                  words=""
+/>,
+              ],
+              <div
+                className="loading"
+/>,
+            ],
+            "className": "Display-info",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "class",
+              "props": Object {
+                "ancestralWeapons": Array [
+                  "Lady Forlorn",
+                ],
+                "coatOfArms": "Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)",
+                "founded": "",
+                "name": "House Corbray of Heart's Home",
+                "seats": Array [
+                  "Heart's Home",
+                ],
+                "swornMembers": Array [
+                  "https://www.anapioficeandfire.com/api/characters/255",
+                  "https://www.anapioficeandfire.com/api/characters/256",
+                  "https://www.anapioficeandfire.com/api/characters/447",
+                  "https://www.anapioficeandfire.com/api/characters/654",
+                  "https://www.anapioficeandfire.com/api/characters/677",
+                  "https://www.anapioficeandfire.com/api/characters/681",
+                  "https://www.anapioficeandfire.com/api/characters/871",
+                  "https://www.anapioficeandfire.com/api/characters/1182",
+                ],
+                "titles": Array [
+                  "Lord of Heart's Home",
+                  "King of the Fingers (historical)",
+                ],
+                "words": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "loading",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

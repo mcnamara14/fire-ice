@@ -4,11 +4,11 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import { fetchHouseData } from '../../apiCalls/index';
-import { cleanHouseData } from '../../cleaners/cleanHouseData';
+import { cleanHouseData } from '../../cleaners/index';
 import { storeHouseData } from '../../actions/index';
-import { Card } from '../Card/Card';
+import Card from '../Card/Card';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     
@@ -60,11 +60,11 @@ App.propTypes = {
   houseData: PropTypes.array
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   houseData: state.houseData
 });
 
-const mapDispatchToProps = dispatch => ({ 
+export const mapDispatchToProps = dispatch => ({ 
   storeHouseData: (data) => dispatch(storeHouseData(data))
 });
 

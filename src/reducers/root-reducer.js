@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import { houseData } from './houseData';
+import { houseSwornMembers } from './houseSwornMembers';
 
 const rootReducer = combineReducers({
-  houseData
+  houseData,
+  houseSwornMembers
 });
 
 

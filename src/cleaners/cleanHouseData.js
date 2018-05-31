@@ -14,7 +14,7 @@ export const cleanHouseData = (houseData) => {
       swornMembers
     };
   });
-
+  
   return cleanHouseData;
 };
 

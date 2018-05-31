@@ -1,0 +1,554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    ancestralWeapons={
+        Array [
+            "weapon1",
+          ]
+    }
+    seats={
+        Array [
+            "seat1",
+          ]
+    }
+    titles={
+        Array [
+            "title1",
+            "title2",
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2 />,
+        <h3 />,
+        <h4>
+          Founded: 
+          N/A
+</h4>,
+        <div
+          className="seats"
+>
+          <p
+                    className="seat"
+          >
+                    Seat: 
+                    seat1
+          </p>
+</div>,
+        <div
+          className="titles"
+>
+          <p
+                    className="title"
+          >
+                    Title: 
+                    title1
+          </p>
+          <p
+                    className="title"
+          >
+                    Title: 
+                    title2
+          </p>
+</div>,
+        <div
+          className="weapons"
+>
+          <p
+                    className="weapon"
+          >
+                    Weapon: 
+                    weapon1
+          </p>
+</div>,
+        <p>
+          Coat of Arms: 
+</p>,
+        undefined,
+      ],
+      "className": "houseCard",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Founded: ",
+            "N/A",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Founded: ",
+          "N/A",
+        ],
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="seat"
+>
+              Seat: 
+              seat1
+</p>,
+          ],
+          "className": "seats",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Seat: ",
+                "seat1",
+              ],
+              "className": "seat",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Seat: ",
+              "seat1",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="title"
+>
+              Title: 
+              title1
+</p>,
+            <p
+              className="title"
+>
+              Title: 
+              title2
+</p>,
+          ],
+          "className": "titles",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Title: ",
+                "title1",
+              ],
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Title: ",
+              "title1",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Title: ",
+                "title2",
+              ],
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Title: ",
+              "title2",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="weapon"
+>
+              Weapon: 
+              weapon1
+</p>,
+          ],
+          "className": "weapons",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Weapon: ",
+                "weapon1",
+              ],
+              "className": "weapon",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Weapon: ",
+              "weapon1",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Coat of Arms: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Coat of Arms: ",
+          undefined,
+        ],
+        "type": "p",
+      },
+      undefined,
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2 />,
+          <h3 />,
+          <h4>
+            Founded: 
+            N/A
+</h4>,
+          <div
+            className="seats"
+>
+            <p
+                        className="seat"
+            >
+                        Seat: 
+                        seat1
+            </p>
+</div>,
+          <div
+            className="titles"
+>
+            <p
+                        className="title"
+            >
+                        Title: 
+                        title1
+            </p>
+            <p
+                        className="title"
+            >
+                        Title: 
+                        title2
+            </p>
+</div>,
+          <div
+            className="weapons"
+>
+            <p
+                        className="weapon"
+            >
+                        Weapon: 
+                        weapon1
+            </p>
+</div>,
+          <p>
+            Coat of Arms: 
+</p>,
+          undefined,
+        ],
+        "className": "houseCard",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Founded: ",
+              "N/A",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Founded: ",
+            "N/A",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="seat"
+>
+                Seat: 
+                seat1
+</p>,
+            ],
+            "className": "seats",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Seat: ",
+                  "seat1",
+                ],
+                "className": "seat",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Seat: ",
+                "seat1",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="title"
+>
+                Title: 
+                title1
+</p>,
+              <p
+                className="title"
+>
+                Title: 
+                title2
+</p>,
+            ],
+            "className": "titles",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Title: ",
+                  "title1",
+                ],
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Title: ",
+                "title1",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Title: ",
+                  "title2",
+                ],
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Title: ",
+                "title2",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="weapon"
+>
+                Weapon: 
+                weapon1
+</p>,
+            ],
+            "className": "weapons",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Weapon: ",
+                  "weapon1",
+                ],
+                "className": "weapon",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Weapon: ",
+                "weapon1",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Coat of Arms: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Coat of Arms: ",
+            undefined,
+          ],
+          "type": "p",
+        },
+        undefined,
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
