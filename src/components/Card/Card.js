@@ -13,15 +13,23 @@ export class Card extends Component {
   }
 
   handleClick = async (swornMembers) => {
-    const membersData = await fetchSwornMembers(swornMembers);
-    const swornMembersData = cleanSwornHouseMembersData(membersData);
+    if (!this.state.swornMembers.length) {
+      const membersData = await fetchSwornMembers(swornMembers);
+      const swornMembersData = cleanSwornHouseMembersData(membersData);
 
-    this.setState({
-      swornMembers: swornMembersData 
-    })
+      this.setState({
+        swornMembers: swornMembersData 
+      })
+    } else {
+      this.setState({
+        swornMembers: []
+      })
+    }
   }
 
   render() {
+    let swornMembersList;
+
     const {
       name,
       founded, 
@@ -51,11 +59,8 @@ export class Card extends Component {
     });
 
     if (this.state.swornMembers) {
-      const swornMembers = this.state.swornMembers.map(member => {
-        console.log(member)
-        return (
-          <div>member[0]</div>
-        )
+      swornMembersList = this.state.swornMembers.map((member, index) => {
+        return <p>{member.name}: {member.living} </p>
       })
     }
 
@@ -75,7 +80,7 @@ export class Card extends Component {
         </div>
         <p>Coat of Arms: {coatOfArms}</p>
         <div className="swornMembers">
-          {swornMembers}
+          {swornMembersList}
         </div>
       </article>
     ); 
