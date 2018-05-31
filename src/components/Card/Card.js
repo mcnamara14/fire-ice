@@ -12,10 +12,21 @@ export const Card = (props) => {
     words
   } = props;
 
+  const foundedEra = founded ? founded : 'N/A';
+  const allSeats = seats.map((seat, index) => {
+    return (
+      <p className="seat"  key={index}>seat: {seat}</p>
+    );
+  });
+
   return (
     <article className="houseCard">
       <h2>{name}</h2>
-      <h3>
+      <h3>{words}</h3>
+      <h4>founded: {foundedEra}</h4>
+      <div className="seats">
+        {allSeats}
+      </div>
     </article>
-  )
+  ) 
 }
