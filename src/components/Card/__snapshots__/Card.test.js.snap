@@ -80,11 +80,7 @@ ShallowWrapper {
         <p>
           Coat of Arms: 
 </p>,
-        <div
-          className="swornMembers"
->
-          
-</div>,
+        undefined,
       ],
       "className": "houseCard",
       "onClick": [Function],
@@ -285,23 +281,7 @@ ShallowWrapper {
         ],
         "type": "p",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            null,
-            Array [],
-          ],
-          "className": "swornMembers",
-        },
-        "ref": null,
-        "rendered": Array [
-          null,
-        ],
-        "type": "div",
-      },
+      undefined,
     ],
     "type": "article",
   },
@@ -357,11 +337,7 @@ ShallowWrapper {
           <p>
             Coat of Arms: 
 </p>,
-          <div
-            className="swornMembers"
->
-            
-</div>,
+          undefined,
         ],
         "className": "houseCard",
         "onClick": [Function],
@@ -562,23 +538,7 @@ ShallowWrapper {
           ],
           "type": "p",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              null,
-              Array [],
-            ],
-            "className": "swornMembers",
-          },
-          "ref": null,
-          "rendered": Array [
-            null,
-          ],
-          "type": "div",
-        },
+        undefined,
       ],
       "type": "article",
     },

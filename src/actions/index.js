@@ -1,7 +1,7 @@
 import { storeHouseData } from './storeHouseData';
-
-export const fakeAction = () => ({type: 'FAKE'});
+import { storeSwornMembers } from './storeSwornMembers';
 
 export { 
-  storeHouseData
+  storeHouseData,
+  storeSwornMembers
 };

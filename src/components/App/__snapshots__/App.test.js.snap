@@ -65,7 +65,7 @@ ShallowWrapper {
         <div
           className="Display-info"
 >
-          <Card
+          <Connect(Card)
                     ancestralWeapons={
                               Array [
                                         "Lady Forlorn",
@@ -161,7 +161,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             Array [
-              <Card
+              <Connect(Card)
                 ancestralWeapons={
                                 Array [
                                                 "Lady Forlorn",
@@ -277,7 +277,7 @@ ShallowWrapper {
           <div
             className="Display-info"
 >
-            <Card
+            <Connect(Card)
                         ancestralWeapons={
                                     Array [
                                                 "Lady Forlorn",
@@ -373,7 +373,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               Array [
-                <Card
+                <Connect(Card)
                   ancestralWeapons={
                                     Array [
                                                       "Lady Forlorn",

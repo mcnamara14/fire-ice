@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { fetchHouseData } from '../../apiCalls/index';
 import { cleanHouseData } from '../../cleaners/index';
 import { storeHouseData } from '../../actions/index';
-import { Card } from '../Card/Card';
+import Card from '../Card/Card';
 
 export class App extends Component {
   constructor() {
