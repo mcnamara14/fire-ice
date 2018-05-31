@@ -1,3 +1,20 @@
-export const cleanHouseData = (data) => {
-  console.log(data)
+export const cleanHouseData = (houseData) => {
+  const cleanHouseData = houseData.map(house => {
+    const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words } = house;
+
+    return {
+      name,
+      founded, 
+      seats,
+      titles,
+      coatOfArms,
+      ancestralWeapons,
+      words
+    };
+  });
+
+  console.log(cleanHouseData)
 }
+
+
+
