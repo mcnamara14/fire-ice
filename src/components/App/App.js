@@ -7,17 +7,40 @@ import { fakeAction } from '../../actions';
 import { fetchHouseData } from '../../apiCalls/index';
 import { cleanHouseData } from '../../cleaners/cleanHouseData';
 import { storeHouseData } from '../../actions/index';
+import { Card } from '../Card/Card';
 
 class App extends Component {
+  constructor() {
+    super();
+    
+    this.state = {
+      loading: false
+    }
+  }
 
   async componentDidMount() {
+    this.setState({
+      loading: true
+    });
+
     const data = await fetchHouseData();
+
+    this.setState({
+      loading: false
+    });
+
     const cleanData = cleanHouseData(data);
 
     this.props.storeHouseData(cleanData);
   }
 
   render() {
+    const houseCards = this.props.houseData.map((house, index) => {
+      return (
+        <Card key={index} {...house} />
+      )
+    })
+
     return (
       <div className='App'>
         <div className='App-header'>
@@ -29,6 +52,8 @@ class App extends Component {
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
+          { houseCards }
+          { this.state.loading ? <div className="loading"></div> : null }
         </div>
       </div>
     );
@@ -40,7 +65,9 @@ App.propTypes = {
   fakeAction: func.isRequired
 };
 
-const mapStateToProps = ({ fake }) => ({ fake });
+const mapStateToProps = state => ({
+  houseData: state.houseData
+});
 
 const mapDispatchToProps = dispatch => ({ 
   fakeAction: () => dispatch(fakeAction()),
