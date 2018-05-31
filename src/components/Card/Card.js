@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './Card.css';
+import { fetchSwornMembers } from '../../apiCalls/index';
+
+export const handleClick = (swornMembers) => {
+  fetchSwornMembers(swornMembers);
+}
 
 export const Card = (props) => {
   const {
@@ -9,24 +14,42 @@ export const Card = (props) => {
     titles,
     coatOfArms,
     ancestralWeapons,
-    words
+    words,
+    swornMembers
   } = props;
 
   const foundedEra = founded ? founded : 'N/A';
   const allSeats = seats.map((seat, index) => {
     return (
-      <p className="seat"  key={index}>seat: {seat}</p>
+      <p className="seat" key={index}>Seat: {seat}</p>
+    );
+  });
+  const allTitles = titles.map((title, index) => {
+    return (
+      <p className="title" key={index}>Title: {title}</p>
+    );
+  });
+  const allWeapons = ancestralWeapons.map((weapon, index) => {
+    return (
+      <p className="weapon" key={index}>Weapon: {weapon}</p>
     );
   });
 
   return (
-    <article className="houseCard">
+    <article className="houseCard" onClick={() => handleClick({swornMembers})} >
       <h2>{name}</h2>
       <h3>{words}</h3>
-      <h4>founded: {foundedEra}</h4>
+      <h4>Founded: {foundedEra}</h4>
       <div className="seats">
         {allSeats}
       </div>
+      <div className="titles">
+        {allTitles}
+      </div>
+      <div className="weapons">
+        {allWeapons}
+      </div>
+      <p>Coat of Arms: {coatOfArms}</p>
     </article>
-  ) 
-}
+  ); 
+};

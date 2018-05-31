@@ -42,6 +42,9 @@
   padding: 40px;
   font: white;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .Container {
