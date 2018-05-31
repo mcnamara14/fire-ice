@@ -13,8 +13,8 @@ export const cleanHouseData = (houseData) => {
     };
   });
 
-  console.log(cleanHouseData)
-}
+  return cleanHouseData;
+};
 
 
 
