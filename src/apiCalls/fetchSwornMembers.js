@@ -1,4 +1,5 @@
 import { fetchHouseData } from ".";
+import { cleanSwornMembersData } from '../cleaners/index';
 
 export const fetchSwornMembers = (swornMembers) => {
   const allSwornMembers = swornMembers.swornMembers;
@@ -13,4 +14,9 @@ export const fetchSwornMembers = (swornMembers) => {
       .then(response => response.json());
   });
 
-}
+  Promise.all(fetchPromises)
+    .then(membersData => cleanSwornMembersData(membersData))
+
+    
+};
+
