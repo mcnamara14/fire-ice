@@ -3,7 +3,9 @@ export const cleanSwornHouseMembersData = (membersData) => {
     const { name, died } = member;
     const living = died ? died : 'Alive';
 
-    return {[name]: living}
+    return {
+      name,
+      living};
   });
 
   return cleanMembersData;
