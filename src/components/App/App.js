@@ -5,11 +5,13 @@ import './App.css';
 import { connect } from 'react-redux';
 import { fakeAction } from '../../actions';
 import { fetchHouseData } from '../../apiCalls/index';
+import { cleanHouseData } from '../../cleaners/cleanHouseData';
 
 class App extends Component {
 
-  componentDidMount() {
-    fetchHouseData();
+  async componentDidMount() {
+    const data = await fetchHouseData();
+    cleanHouseData(data);
   }
 
   render() {
