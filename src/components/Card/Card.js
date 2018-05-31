@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './Card.css';
 import { fetchSwornMembers } from '../../apiCalls/index';
+import { cleanSwornHouseMembersData } from '../../cleaners/index';
 
-export const handleClick = (swornMembers) => {
-  fetchSwornMembers(swornMembers);
+export const handleClick = async (swornMembers) => {
+  const membersData = await fetchSwornMembers(swornMembers);
+  const cleanMembersData = cleanSwornHouseMembersData(membersData);
 }
 
 export const Card = (props) => {

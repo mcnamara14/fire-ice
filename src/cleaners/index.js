@@ -1,7 +1,7 @@
 import { cleanHouseData } from './cleanHouseData';
-import { cleanSwornMembersData } from './cleanSwornMembersData';
+import { cleanSwornHouseMembersData  } from './cleanSwornHouseMembersData';
 
 export {
   cleanHouseData,
-  cleanSwornMembersData
+  cleanSwornHouseMembersData
 }
