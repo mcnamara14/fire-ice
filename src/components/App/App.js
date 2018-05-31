@@ -9,9 +9,25 @@ import { cleanHouseData } from '../../cleaners/cleanHouseData';
 import { storeHouseData } from '../../actions/index';
 
 class App extends Component {
+  constructor() {
+    super();
+    
+    this.state = {
+      loading: false
+    }
+  }
 
   async componentDidMount() {
+    this.setState({
+      loading: true
+    });
+
     const data = await fetchHouseData();
+
+    this.setState({
+      loading: false
+    });
+
     const cleanData = cleanHouseData(data);
 
     this.props.storeHouseData(cleanData);
@@ -29,6 +45,7 @@ class App extends Component {
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
+          { this.state.loading ? <div className="loading"></div> : null }
         </div>
       </div>
     );
