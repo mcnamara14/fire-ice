@@ -79,6 +79,7 @@ export class Card extends Component {
         </div>
         <p>Coat of Arms: {coatOfArms}</p>
         <div className="swornMembers">
+          { this.state.swornMembers.length ? <h4>Sworn Members</h4> : null }
           {swornMembersList}
         </div>
       </article>

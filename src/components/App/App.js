@@ -4,11 +4,11 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import { fetchHouseData } from '../../apiCalls/index';
-import { cleanHouseData } from '../../cleaners/cleanHouseData';
+import { cleanHouseData } from '../../cleaners/index';
 import { storeHouseData } from '../../actions/index';
 import { Card } from '../Card/Card';
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     
